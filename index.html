@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" size="16x16" href="./favicons/favicon-16x16.png">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Silkscreen" rel="stylesheet">
+    <title>RPG Project</title>
+    <!--JS-->
+    <script defer type="text/javascript" src="./index.js"></script>
+</head>
+<body>    
+    <section class="hidden_toggle_1 narration">
+        <!--<div id="div-img-criador">
+            <img id="img-criador" src="./img/creator.png" alt="The Creator">
+        </div>-->
+        <div>
+            <span id="narration_placeholder">Press any key...</span>
+        </div>
+        
+        <div id="press_key_container">
+            <span id="press_key">Press any key...</span>
+        </div>
+        <div class="cylon_eye_container">
+            <div class="cylon_eye"></div>
+        </div>
+
+        <div class="always_hidden">
+            <p class="narr">The hammer of creation hits down...</p>
+            <p class="narr">sparkling a singular world<br>in this god forsaken universe...</p>
+            <p class="narr">The World of Andoxenon</p>
+            <p class="narr">A place of wonders and of magic</p>
+            <!--<div  class="img-container">
+                <img src="./img/landscape2.png" alt="Andopymnum Town">
+            </div-->
+            <p class="narr">but also of tyranny and destruction</p>                
+            <p class="narr"><u>YOU</u> awaken and feel the beckon</p>
+            <p class="narr">To enter this world and fulfill your fate...</p>
+            <p class="narr">whatever it turns out to be.</p>
+        </div>        
+    </section>
+
+    <section class="hidden_toggle_2">
+        <div>                
+            <button type="button" class="button_create">Create Character</button>                
+        </div>
+    </section>
+    
+    <section class="hidden_toggle_3">
+         <!--<div class="attributes_table">
+            <div class="table_header">
+                Distribute your points: <span id="points_left"></span>
+            </div>
+            <div class="attribute strength">
+                <span>Strength</span>
+                <span class="attr_btn_container"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></span>
+            </div>
+            <div class="attribute agility">
+                <span>Agility</span>
+                <span class="attr_btn_container"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span class="attr_btn_container"><button type="button" class="btn_plus">+</button></span>
+            </div>                    
+            <div class="attribute constitution">
+                <span>Constitution</span>
+                <span class="attr_btn_container"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></span>
+            </div>
+            <div class="attribute dexterity">
+                <div>Dexterity<br>aaa</div>
+                <div class="attr_btn_container"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></div>
+            </div>                    
+            <div class="attribute intelligence">
+                <span>Intelligence</span>
+                <span class="attr_btn_container"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></span>
+            </div>
+            <div class="attribute charisma">
+                <span>Charisma</span>
+                <span class="attr_btn_container"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></span>
+            </div>
+        </div>-->
+       
+        <div class="attributes_table_container">
+            <table class="attributes_table">
+                <theader>
+                    <th class= "table_header" colspan="2">Distribute your points: <span id="points_left"></span></th>
+                </theader>
+                <tr class="attribute strength">
+                    <td>Strength</td>
+                    <td class="align_right"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></td>
+                </tr>
+                <tr class="attribute agility">
+                    <td>Agility</td>
+                    <td class="align_right"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></td>
+                </tr>                    
+                <tr class="attribute constitution">
+                    <td>Constitution</td>
+                    <td class="align_right"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></td>
+                </tr>
+                <tr class="attribute dexterity">
+                    <td>Dexterity</td>
+                    <td class="align_right"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></td>
+                </tr>                    
+                <tr class="attribute intelligence">
+                    <td>Intelligence</td>
+                    <td class="align_right"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></td>
+                </tr>
+                <tr class="attribute charisma">
+                    <td>Charisma</td>
+                    <td class="align_right"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div>
+            <button type="button" id="button_next">Next</button>
+        </div>
+    </section>
+
+    <!--<section class="hidden_toggle_4">
+    
+    <img class="class-icon" id="explorer" src="./img/explorer2.png" alt="Explorer">
+            <img class="class-icon" id="vampire" src="./img/vampire2.png" alt="Vampire">
+            <img class="class-icon" id="mantid" src="./img/mantid.png" alt="Mantid">
+
+    </section>-->
+
+
+
+
+
+
+
+    <footer>
+        <div id="footer_container">
+            <p>Developed by Behe.</p>
+            <p>I don't own any of the images or assets used.</p>
+            <p>All copyright go to the respective owners.</p>
+        </div>
+    </footer>
+</body>
+</html>
