@@ -153,47 +153,48 @@ document.getElementById('button_next').addEventListener('click', (event) => {
 });
 
 
-/*buttonMinus.forEach(function attrReduce() {
-    for (var i = 0; i < attributeNumber.length; i++) {     
-        buttonMinus[i].addEventListener('click', (event) => {
-            if (attributeNumber[i] > 1) {
-                attributeNumber[i] -= 1;            
-                    if (i = 0) {                        
-                        attributeNumber[i].innerHTML = strValue;
-                    } else if (i = 1) {
-                        attributeNumber[i].innerHTML = agiValue;
-                    } else if (i = 2) {
-                        attributeNumber[i].innerHTML = constValue;
-                    } else if (i = 3) {
-                        attributeNumber[i].innerHTML = dexValue;
-                    } else if (i = 4) {
-                        attributeNumber[i].innerHTML = intValue;
-                    } else if (i = 5) {
-                        attributeNumber[i].innerHTML = chaValue;
-                    }
-                }
-            })};
+function classDesc0() {
+    document.querySelector('#explorer_desc').style.color = '#cdcdcd';
+};
+function removeClassDesc0() {
+    document.querySelector('#explorer_desc').style.color = 'rgba(0, 0, 0, 0)';
+};
+
+function classDesc1() {
+    document.querySelector('#warlock_desc').style.color = '#cdcdcd';
+};
+function removeClassDesc1() {
+    document.querySelector('#warlock_desc').style.color = 'rgba(0, 0, 0, 0)';
+};
+
+function classDesc2() {
+    document.querySelector('#druid_desc').style.color = '#cdcdcd';
+};
+function removeClassDesc2() {
+    document.querySelector('#druid_desc').style.color = 'rgba(0, 0, 0, 0)';
+};
+
+
+nextClass = document.querySelector('#btn_change_class_right');
+//const prevClass = document.querySelector('#btn_change_class_left');
+
+const explorer = document.querySelector('.class_01');
+const warlock = document.querySelector('.class_02');
+const druid = document.querySelector('.class_03');
+
+nextClass.addEventListener('click', () => {
+    if (explorer.style.display = 'block') {
+        explorer.style.display = 'none';
+        warlock.style.display = 'block';
+        druid.style.display = 'none';
+    }
 });
-buttonPlus.forEach(function attrIncrease() {
-    for (var i = 0; i < attributeNumber.length; i++) {
-        buttonPlus[i].addEventListener('click', (event) => {    
-            if (attributeNumber[i] < 10) {
-                attributeNumber[i] += 1;
-                    if (i = 0) {
-                    } else if (i = 1) {
-                        attributeNumber[i].innerHTML = agiValue;
-                    } else if (i = 2) {
-                        attributeNumber[i].innerHTML = constValue;
-                    } else if (i = 3) {
-                        attributeNumber[i].innerHTML = dexValue;
-                    } else if (i = 4) {
-                        attributeNumber[i].innerHTML = intValue;
-                    } else if (i = 5) {
-                        attributeNumber[i].innerHTML = chaValue;
-                    }
-                }
-    })};
+
+nextClass.addEventListener('click', () => {    
+    if (warlock.style.display = 'block') {
+        explorer.style.display = 'none';
+        warlock.style.display = 'none';
+        druid.style.display = 'block';
+        //alert('ok?!');
+    }
 });
-if (attributeNumber[0].innerHTML == 1) {
-console.log('ok')
-};*/
