@@ -51,13 +51,77 @@ document.addEventListener('keydown', (event) => {
     })
 });
 
-//event => create character button
+//event => 'create character' button
 btnCreate.addEventListener('click', (event) => {
     document.querySelector('.hidden_toggle_2').style.display = 'none';
     document.querySelector('.hidden_toggle_3').style.display = 'block';
 });
 
-//str- & str+
+// Classes Description
+function classDesc0() {
+    document.querySelector('#explorer_desc').style.color = '#cdcdcd';
+};
+function removeClassDesc0() {
+    document.querySelector('#explorer_desc').style.color = 'rgba(0, 0, 0, 0)';
+};
+
+function classDesc1() {
+    document.querySelector('#necromancer_desc').style.color = '#cdcdcd';
+};
+function removeClassDesc1() {
+    document.querySelector('#necromancer_desc').style.color = 'rgba(0, 0, 0, 0)';
+};
+
+function classDesc2() {
+    document.querySelector('#sage_desc').style.color = '#cdcdcd';
+};
+function removeClassDesc2() {
+    document.querySelector('#sage_desc').style.color = 'rgba(0, 0, 0, 0)';
+};
+
+function classDesc3() {
+    document.querySelector('#lycan_desc').style.color = '#cdcdcd';
+};
+function removeClassDesc3() {
+    document.querySelector('#lycan_desc').style.color = 'rgba(0, 0, 0, 0)';
+};
+function classDesc4() {
+    document.querySelector('#vampire_desc').style.color = '#cdcdcd';
+};
+function removeClassDesc4() {
+    document.querySelector('#vampire_desc').style.color = 'rgba(0, 0, 0, 0)';
+};
+
+//Class Nav Controls
+let classIndex = 1;
+showClasses(classIndex);
+
+function plusClasses(n) {
+  showClasses(classIndex += n);
+  document.getElementById('confirm_class').style.visibility = 'hidden';
+}
+
+function showClasses(n) {
+  let i;
+  let classes = document.getElementsByClassName("class_selector");  
+  if (n > classes.length) {classIndex = 1}
+  if (n < 1) {classIndex = classes.length}
+  for (i = 0; i < classes.length; i++) {
+    classes[i].style.display = "none";
+  }
+  classes[classIndex-1].style.display = "block";
+}
+
+function confirmClass() {
+    document.getElementById('confirm_class').style.visibility = 'visible';
+}
+
+function classConfirmed() {
+    document.querySelector('.hidden_toggle_3').style.display = 'none';
+    document.querySelector('.hidden_toggle_4').style.display = 'block';
+}
+
+//str
 buttonMinus[0].addEventListener('click', (event) => {
     if (strValue > 1) {
         strValue -= 1;
@@ -72,7 +136,7 @@ buttonPlus[0].addEventListener('click', (event)  => {
         pointsLeft.innerHTML -= 1;
     }
 });
-// agi- $ agi+
+//agi
 buttonMinus[1].addEventListener('click', (event) => {
     if (agiValue > 1) {
     agiValue -= 1;
@@ -87,7 +151,7 @@ buttonPlus[1].addEventListener('click', (event)  => {
         pointsLeft.innerHTML -= 1;
     }
 });
-// const- $ const+
+//const
 buttonMinus[2].addEventListener('click', (event) => {
     if (constValue > 1) {
     constValue -= 1;
@@ -102,7 +166,7 @@ buttonPlus[2].addEventListener('click', (event)  => {
     pointsLeft.innerHTML -= 1;
     }
 });
-// dex- $ dex+
+//dex
 buttonMinus[3].addEventListener('click', (event) => {
     if (dexValue > 1) {
     dexValue -= 1;
@@ -132,7 +196,7 @@ buttonPlus[4].addEventListener('click', (event)  => {
     pointsLeft.innerHTML -= 1;
     }
 });
-//charisma
+//cha
 buttonMinus[5].addEventListener('click', (event) => {
     if (chaValue > 1) {
     chaValue -= 1;
@@ -150,51 +214,4 @@ buttonPlus[5].addEventListener('click', (event)  => {
 
 document.getElementById('button_next').addEventListener('click', (event) => {
     alert('pls give me a job');
-});
-
-
-function classDesc0() {
-    document.querySelector('#explorer_desc').style.color = '#cdcdcd';
-};
-function removeClassDesc0() {
-    document.querySelector('#explorer_desc').style.color = 'rgba(0, 0, 0, 0)';
-};
-
-function classDesc1() {
-    document.querySelector('#warlock_desc').style.color = '#cdcdcd';
-};
-function removeClassDesc1() {
-    document.querySelector('#warlock_desc').style.color = 'rgba(0, 0, 0, 0)';
-};
-
-function classDesc2() {
-    document.querySelector('#druid_desc').style.color = '#cdcdcd';
-};
-function removeClassDesc2() {
-    document.querySelector('#druid_desc').style.color = 'rgba(0, 0, 0, 0)';
-};
-
-
-nextClass = document.querySelector('#btn_change_class_right');
-//const prevClass = document.querySelector('#btn_change_class_left');
-
-const explorer = document.querySelector('.class_01');
-const warlock = document.querySelector('.class_02');
-const druid = document.querySelector('.class_03');
-
-nextClass.addEventListener('click', () => {
-    if (explorer.style.display = 'block') {
-        explorer.style.display = 'none';
-        warlock.style.display = 'block';
-        druid.style.display = 'none';
-    }
-});
-
-nextClass.addEventListener('click', () => {    
-    if (warlock.style.display = 'block') {
-        explorer.style.display = 'none';
-        warlock.style.display = 'none';
-        druid.style.display = 'block';
-        //alert('ok?!');
-    }
 });

@@ -52,37 +52,64 @@
             <button type="button" class="button_create">Create Character</button>                
         </div>
     </section>
-    
+
     <section class="hidden_toggle_3">
-         <!--<div class="attributes_table">
-            <div class="table_header">
-                Distribute your points: <span id="points_left"></span>
+        <h1>Choose Your Class:</h1>  
+             
+        <div class="class_nav">
+            <button class="navbutton" type="button" id="btn_change_class_left" onclick="plusClasses(-1)">&#10094;</button>        
+            <button class="navbutton" type="button" id="btn_change_class_right" onclick="plusClasses(1)">&#10095;</button> 
+        </div> 
+               
+        <div class="classes_container">
+
+            <div class="class_selector">
+                <img class="class-icon" id="lycan" src="./img/lycan.png" alt="Lycan" onmouseover="classDesc3()" onmouseleave="removeClassDesc3()" onclick="confirmClass()">
+                <div class="class_desc" id="lycan_desc">
+                    <h2>Lycan</h2>
+                    <p>Shapeshifting creatures of the night cursed to forever remain in this beastly state. Lycans are purely instinctive, relentless beasts. Stalk, howl, rip and tear.<br><br>Main attributes: Strength, Agility, Constitution.</p>
+                </div>
             </div>
-            <div class="attribute strength">
-                <span>Strength</span>
-                <span class="attr_btn_container"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></span>
+
+            <div class="class_selector">
+                <img class="class-icon" id="vampire" src="./img/vampire.png" alt="Vampire" onmouseover="classDesc4()" onmouseleave="removeClassDesc4()" onclick="confirmClass()">
+                <div class="class_desc" id="vampire_desc">
+                    <h2>Vampire</h2>
+                    <p>Either silver-tongued devils who always get what they want or shadowy nocturnal figures who only crave for blood. Concocting their vile plans under the night's cloak, vampires are both cunning and brutal.<br><br>Main attributes: Intelligence, Charisma.</p>
+                </div>
             </div>
-            <div class="attribute agility">
-                <span>Agility</span>
-                <span class="attr_btn_container"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span class="attr_btn_container"><button type="button" class="btn_plus">+</button></span>
-            </div>                    
-            <div class="attribute constitution">
-                <span>Constitution</span>
-                <span class="attr_btn_container"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></span>
+
+            <div class="class_selector">    
+                <img class="class-icon" id="explorer" src="./img/hunter.png" alt="Explorer" onmouseover="classDesc0()" onmouseleave="removeClassDesc0()" onclick="confirmClass()">
+                <div class="class_desc" id="explorer_desc">
+                    <h2>Hunter</h2>
+                    <p>Humans both immune to the lycan curse and not descending of the vampire bloodline. Left alone to survive in this dark world, hunters are resourceful, unpredictable and errant figures.<br>Able to survive in the sunlight.<br><br>Main attributes: Dexterity.</p>
+                </div>                
             </div>
-            <div class="attribute dexterity">
-                <div>Dexterity<br>aaa</div>
-                <div class="attr_btn_container"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></div>
-            </div>                    
-            <div class="attribute intelligence">
-                <span>Intelligence</span>
-                <span class="attr_btn_container"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></span>
+
+            <div class="class_selector">
+                <img class="class-icon" id="necromancer" src="./img/necromancer.png" alt="Necromancer" onmouseover="classDesc1()" onmouseleave="removeClassDesc1()" onclick="confirmClass()">
+                <div class="class_desc" id="necromancer_desc">
+                    <h2>Necromancer</h2>
+                    <p>Pulled into this realm by occult rituals of a long gone Lord of the dark. Necromancers are unliving, chaotic individuals able to interact and control the dead. And given this long going war, there are plenty of lost souls going around...<br><br>Main attributes: Intelligence.</p>
+                </div>
             </div>
-            <div class="attribute charisma">
-                <span>Charisma</span>
-                <span class="attr_btn_container"><button type="button" class="btn_minus">-</button><span class="attribute_number"></span><button type="button" class="btn_plus">+</button></span>
+
+            <div class="class_selector">
+                <img class="class-icon" id="sage" src="./img/sage.png" alt="Sage" onmouseover="classDesc2()" onmouseleave="removeClassDesc2()" onclick="confirmClass()">
+                <div class="class_desc" id="sage_desc">
+                    <h2>Sage</h2>
+                    <p>Akin to rural environments and magic, Sages are insightful beings from another realm who have found solace on this planet. They channel and weaponize the forces of nature around them. Both rogues and mages, Sages are formidable individuals.<br>Able to survive in the sunlight.<br><br>Main attributes: Dexterity, Intelligence.</p>
+                </div>
             </div>
-        </div>-->
+
+            <div id="confirm_class">
+                <button class="confirm_class_button" onclick="classConfirmed()">Confirm Class</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="hidden_toggle_4">        
         <div class="attributes_table_container">
             <table class="attributes_table">
                 <theader>
@@ -116,63 +143,11 @@
         </div>
         
         <div>
-            <button type="button" id="button_next">Next</button>
+            <button disabled type="button" id="button_next">Next</button>
         </div>
     </section>
 
-    <section class="hidden_toggle_4">
-
-        <h1>Choose Your Class:</h1>  
-             
-        <div class="class_nav">
-            <button type="button" id="btn_change_class_left">&lt;</button>        
-            <button type="button" id="btn_change_class_right">&gt;</button> 
-        </div> 
-               
-        <div class="classes_container">
-
-            <div class="class_01">    
-                <img class="class-icon" id="explorer" src="./img/explorer2.png" alt="Explorer" onmouseover="classDesc0()" onmouseleave="removeClassDesc0()">
-                <div class="class_desc" id="explorer_desc">
-                    <h2>Explorer</h2>
-                    <p>The Explorer is a resourceful collector, an unpredictable and errant figure. Either a shadowy thief or a silver-tongued devil, they are always ready for whatever unforeseeable situation they might find themselves in.</p>
-                </div>                
-            </div>
-
-            <div class="class_02">
-                <img class="class-icon" id="warlock" src="./img/warlock.png" alt="Warlock" onmouseover="classDesc1()" onmouseleave="removeClassDesc1()">
-                <div class="class_desc" id="warlock_desc">
-                    <h2>Warlock</h2>
-                    <p>description.</p>
-                </div>
-            </div>
-
-            <div class="class_03">
-                <img class="class-icon" id="druid" src="./img/druid.png" alt="Druid" onmouseover="classDesc2()" onmouseleave="removeClassDesc2()">
-                <div class="class_desc" id="druid_desc">
-                    <h2>Druid</h2>
-                    <p>description.</p>
-                </div>
-            </div>
-
-
-        </div>
-
-    </section>
     
-    <!--<section>
-
-        <img class="class-icon" id="warrior" src="#" alt="Warrior">
-        <img class="class-icon" id="vampire" src="./img/vampire2.png" alt="Vampire">
-        <img class="class-icon" id="mantid" src="./img/mantid.png" alt="Mantid">
-    </section>-->
-
-
-
-
-
-
-
     <footer>
         <div id="footer_container">
             <p>Developed by Behe.</p>

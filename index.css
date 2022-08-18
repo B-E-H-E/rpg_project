@@ -107,18 +107,17 @@ width: 10%;
 }
 
 /* SHOULD BE Points Distribution */
-/*
 .hidden_toggle_4 {
     display: none
 }
-*/
 
-.hidden_toggle_1, .hidden_toggle_2, .hidden_toggle_3 {
+
+.hidden_toggle_1, .hidden_toggle_2, .hidden_toggle_4 {
     position: relative;
     top: 50vh;
 }    
 
-.hidden_toggle_3 {
+.hidden_toggle_4 {
     transform: translate(0, -50%);
 }
 
@@ -255,14 +254,20 @@ width: 10%;
 }
 
 /* -----------------------------  CLASS SELECTION  --------------------------------- */
-.hidden_toggle_1 {
+/*.hidden_toggle_1 {
     display: none;
+}*/
+
+h1 {
+text-shadow: cyan -2px 0, red 2px 0;
+letter-spacing: 0.8rem;
+padding: 2.5%;
 }
 
 .classes_container {    
     position: absolute;
     top: 50%;
-    transform: translateY(-55%);
+    transform: translateY(-45%);
 }
 
 .class-icon {
@@ -272,6 +277,7 @@ width: 10%;
     border-radius: 5%;
     position: relative;
     transition: 1s;
+    cursor: pointer;
 }
 
 .class-icon:hover {
@@ -301,11 +307,7 @@ width: 10%;
     margin: 0 auto;
 }
 
-.class_02 {
-    display: none;
-}
-
-.class_03 {
+.class_selector {
     display: none;
 }
 
@@ -341,4 +343,37 @@ width: 10%;
     display: flex;
     gap: 30%;
     justify-content: center;    
+}
+
+.confirm_class_button {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #eee;
+    border-radius: 10px;
+    font-weight: 500;
+    font-family: inherit;
+    font-size: 1.75rem;
+    color: inherit;
+    cursor: pointer;
+}
+
+.confirm_class_button:hover {
+    background-color: rgb(200, 60, 80);
+    border-color: rgb(200, 60, 80);
+    transition: 0.5s ease;
+}
+
+.confirm_class_button:active {
+    color: rgb(200, 60, 80);
+    transition: none;
+}
+
+#confirm_class {
+    visibility: hidden;    
+}
+
+[disabled] {
+    color: #ddd !important;
+    background-color: #ddd !important;
 }
