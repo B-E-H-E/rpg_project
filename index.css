@@ -27,7 +27,7 @@ footer {
     position: absolute;
     top: 100vh;
     transform: translate(0, -100%);
-    font-size: 1.3rem;
+    font-size: 1.15rem;
 }
 
 h1 {
@@ -68,31 +68,13 @@ width: 10%;
 }
 
 #narration_placeholder {    
-    width: 100%;
+    width: 80%;
     text-align: center;
+    margin: 4%;    
     font-size: 2.5rem;
     text-shadow: cyan -2px 0, red 2px 0;    
     letter-spacing: 2px;
 }
-
-/*.img-container img {
-    margin: 0 auto;
-    max-width: 500px;
-    height: auto;
-}
-
-.img-container {
-    text-align: center;
-}*/
-
-/*#div-img-criador {
-    width: 100%;
-}
-
-#img-criador {    
-    width: 100%;
-    object-fit: cover;    
-}*/
 
 /* ---------------------------------  DISPLAYS  ---------------------------------  */
 
@@ -112,10 +94,15 @@ width: 10%;
 }
 
 
-.hidden_toggle_1, .hidden_toggle_2, .hidden_toggle_4 {
+.hidden_toggle_2, .hidden_toggle_4 {
     position: relative;
     top: 50vh;
-}    
+}
+
+.hidden_toggle_1 {
+    position: relative;
+    top: 40vh;
+}
 
 .hidden_toggle_4 {
     transform: translate(0, -50%);
@@ -132,6 +119,7 @@ width: 10%;
     text-shadow: cyan -2px 0, red 2px 0;
     text-align: center;    
     position: relative;
+    top: -5vh;
     width: clamp(20vw, 450px, 80vw);
     letter-spacing: 2px;
     border: none;
@@ -281,7 +269,7 @@ padding: 2.5%;
 }
 
 .class-icon:hover {
-    height: 350px;
+    height: 325px;
     width: auto;
     border: 1px solid white;
     transition: 1s;
@@ -341,7 +329,7 @@ padding: 2.5%;
     top: 50%;
     z-index: 1;
     display: flex;
-    gap: 30%;
+    gap: 45%;
     justify-content: center;    
 }
 
@@ -373,7 +361,71 @@ padding: 2.5%;
     visibility: hidden;    
 }
 
-[disabled] {
-    color: #ddd !important;
-    background-color: #ddd !important;
+@media (max-width: 425px) {
+    .button_create {
+        font-size: 2.65rem;
+    }
+    #narration_placeholder {
+        font-size: 2rem;
+        margin: 0;
+    }
+    #narration_container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .class_nav {        
+        gap: 70%;            
+    }    
+    footer {
+        font-size: 1rem;
+        display: none;
+    }
+    .table_header {
+        font-size: 2rem;
+    }
+    .attributes_table {
+        font-size: 1.5rem;
+    }    
+    .attribute {
+        letter-spacing: 0.1rem;        
+    }
+}
+
+@media (max-width: 768px) {    
+    .class_nav {        
+        gap: 70%;            
+    }    
+    .classes_container {        
+        top: 10%;
+        transform: translate(0, 0);
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .class-icon {
+        height: 40vh;
+        width: auto;
+        border: none; 
+        margin: 2%;   
+    }
+    .class-icon:hover {
+        height: 40vh;
+        width: auto;
+        border: none;
+    }
+    footer {
+        font-size: 1rem;
+        display: none;
+    }
+    .class_desc {
+        color: #cdcdcd !important;
+        font-size: 1.4rem !important;
+    }
+    .class_desc p {
+        width: 90%;
+        text-align: justify;
+    }    
+    #confirm_class {
+        visibility: visible !important;    
+    }
 }

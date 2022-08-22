@@ -59,37 +59,37 @@ btnCreate.addEventListener('click', (event) => {
 
 // Classes Description
 function classDesc0() {
-    document.querySelector('#explorer_desc').style.color = '#cdcdcd';
+    document.querySelectorAll('.class_desc')[0].style.color = '#cdcdcd';
 };
 function removeClassDesc0() {
-    document.querySelector('#explorer_desc').style.color = 'rgba(0, 0, 0, 0)';
+    document.querySelectorAll('.class_desc')[0].style.color = 'rgba(0, 0, 0, 0)';
 };
 
 function classDesc1() {
-    document.querySelector('#necromancer_desc').style.color = '#cdcdcd';
+    document.querySelectorAll('.class_desc')[1].style.color = '#cdcdcd';
 };
 function removeClassDesc1() {
-    document.querySelector('#necromancer_desc').style.color = 'rgba(0, 0, 0, 0)';
+    document.querySelectorAll('.class_desc')[1].style.color = 'rgba(0, 0, 0, 0)';
 };
 
 function classDesc2() {
-    document.querySelector('#sage_desc').style.color = '#cdcdcd';
+    document.querySelectorAll('.class_desc')[2].style.color = '#cdcdcd';
 };
 function removeClassDesc2() {
-    document.querySelector('#sage_desc').style.color = 'rgba(0, 0, 0, 0)';
+    document.querySelectorAll('.class_desc')[2].style.color = 'rgba(0, 0, 0, 0)';
 };
 
 function classDesc3() {
-    document.querySelector('#lycan_desc').style.color = '#cdcdcd';
+    document.querySelectorAll('.class_desc')[3].style.color = '#cdcdcd';
 };
 function removeClassDesc3() {
-    document.querySelector('#lycan_desc').style.color = 'rgba(0, 0, 0, 0)';
+    document.querySelectorAll('.class_desc')[3].style.color = 'rgba(0, 0, 0, 0)';
 };
 function classDesc4() {
-    document.querySelector('#vampire_desc').style.color = '#cdcdcd';
+    document.querySelectorAll('.class_desc')[4].style.color = '#cdcdcd';
 };
 function removeClassDesc4() {
-    document.querySelector('#vampire_desc').style.color = 'rgba(0, 0, 0, 0)';
+    document.querySelectorAll('.class_desc')[4].style.color = 'rgba(0, 0, 0, 0)';
 };
 
 //Class Nav Controls
@@ -213,5 +213,11 @@ buttonPlus[5].addEventListener('click', (event)  => {
 });
 
 document.getElementById('button_next').addEventListener('click', (event) => {
-    alert('pls give me a job');
+    if (strValue + agiValue + constValue + dexValue + intValue + chaValue == 23) {
+        alert('pls give me a job');
+    } else {
+        alert('Distribute all the stat points!')
+    }
+    
 });
+

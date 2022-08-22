@@ -21,7 +21,7 @@
         <!--<div id="div-img-criador">
             <img id="img-criador" src="./img/creator.png" alt="The Creator">
         </div>-->
-        <div>
+        <div id="narration_container">
             <span id="narration_placeholder">Press any key...</span>
         </div>
         
@@ -64,7 +64,7 @@
         <div class="classes_container">
 
             <div class="class_selector">
-                <img class="class-icon" id="lycan" src="./img/lycan.png" alt="Lycan" onmouseover="classDesc3()" onmouseleave="removeClassDesc3()" onclick="confirmClass()">
+                <img class="class-icon" id="lycan" src="./img/lycan.png" alt="Lycan" onmouseover="classDesc0()" onmouseleave="removeClassDesc0()" onclick="confirmClass()">
                 <div class="class_desc" id="lycan_desc">
                     <h2>Lycan</h2>
                     <p>Shapeshifting creatures of the night cursed to forever remain in this beastly state. Lycans are purely instinctive, relentless beasts. Stalk, howl, rip and tear.<br><br>Main attributes: Strength, Agility, Constitution.</p>
@@ -72,7 +72,7 @@
             </div>
 
             <div class="class_selector">
-                <img class="class-icon" id="vampire" src="./img/vampire.png" alt="Vampire" onmouseover="classDesc4()" onmouseleave="removeClassDesc4()" onclick="confirmClass()">
+                <img class="class-icon" id="vampire" src="./img/vampire.png" alt="Vampire" onmouseover="classDesc1()" onmouseleave="removeClassDesc1()" onclick="confirmClass()">
                 <div class="class_desc" id="vampire_desc">
                     <h2>Vampire</h2>
                     <p>Either silver-tongued devils who always get what they want or shadowy nocturnal figures who only crave for blood. Concocting their vile plans under the night's cloak, vampires are both cunning and brutal.<br><br>Main attributes: Intelligence, Charisma.</p>
@@ -80,15 +80,15 @@
             </div>
 
             <div class="class_selector">    
-                <img class="class-icon" id="explorer" src="./img/hunter.png" alt="Explorer" onmouseover="classDesc0()" onmouseleave="removeClassDesc0()" onclick="confirmClass()">
+                <img class="class-icon" id="explorer" src="./img/hunter.png" alt="Explorer" onmouseover="classDesc2()" onmouseleave="removeClassDesc2()" onclick="confirmClass()">
                 <div class="class_desc" id="explorer_desc">
                     <h2>Hunter</h2>
-                    <p>Humans both immune to the lycan curse and not descending of the vampire bloodline. Left alone to survive in this dark world, hunters are resourceful, unpredictable and errant figures.<br>Able to survive in the sunlight.<br><br>Main attributes: Dexterity.</p>
+                    <p>Humans both immune to the lycan curse and not descending of the vampire bloodline. Left alone to survive in this dark world, hunters are resourceful, unpredictable and errant figures.<br><br>Main attributes: Dexterity.</p>
                 </div>                
             </div>
 
             <div class="class_selector">
-                <img class="class-icon" id="necromancer" src="./img/necromancer.png" alt="Necromancer" onmouseover="classDesc1()" onmouseleave="removeClassDesc1()" onclick="confirmClass()">
+                <img class="class-icon" id="necromancer" src="./img/necromancer.png" alt="Necromancer" onmouseover="classDesc3()" onmouseleave="removeClassDesc3()" onclick="confirmClass()">
                 <div class="class_desc" id="necromancer_desc">
                     <h2>Necromancer</h2>
                     <p>Pulled into this realm by occult rituals of a long gone Lord of the dark. Necromancers are unliving, chaotic individuals able to interact and control the dead. And given this long going war, there are plenty of lost souls going around...<br><br>Main attributes: Intelligence.</p>
@@ -96,10 +96,10 @@
             </div>
 
             <div class="class_selector">
-                <img class="class-icon" id="sage" src="./img/sage.png" alt="Sage" onmouseover="classDesc2()" onmouseleave="removeClassDesc2()" onclick="confirmClass()">
+                <img class="class-icon" id="sage" src="./img/sage.png" alt="Sage" onmouseover="classDesc4()" onmouseleave="removeClassDesc4()" onclick="confirmClass()">
                 <div class="class_desc" id="sage_desc">
                     <h2>Sage</h2>
-                    <p>Akin to rural environments and magic, Sages are insightful beings from another realm who have found solace on this planet. They channel and weaponize the forces of nature around them. Both rogues and mages, Sages are formidable individuals.<br>Able to survive in the sunlight.<br><br>Main attributes: Dexterity, Intelligence.</p>
+                    <p>Akin to rural environments and magic, Sages are insightful beings from another realm that can channel and weaponize the forces of nature around them. Both rogues and mages, Sages are formidable individuals.<br><br>Main attributes: Dexterity, Intelligence.</p>
                 </div>
             </div>
 
@@ -143,16 +143,14 @@
         </div>
         
         <div>
-            <button disabled type="button" id="button_next">Next</button>
+            <button type="button" id="button_next">Next</button>
         </div>
     </section>
 
     
     <footer>
         <div id="footer_container">
-            <p>Developed by Behe.</p>
-            <p>I don't own any of the images or assets used.</p>
-            <p>All copyright go to the respective owners.</p>
+            <p>Developed by Behe. I don't own any of the images or assets used.</p>
         </div>
     </footer>
 </body>
